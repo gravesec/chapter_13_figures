@@ -1,3 +1,10 @@
+'''
+This script requires Python 3.7.0 and the following packages:
+numpy==1.16.3
+matplotlib==3.0.3 (for plotting results)
+'''
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 
