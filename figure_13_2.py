@@ -175,9 +175,9 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Set the random seed:
-    np.random.seed(args.random_seed)
-    # Generate a random seed for each run:
-    random_seeds = [np.random.randint(low=0, high=2**32) for run in range(args.num_runs)]
+    random.seed(args.random_seed)
+    # Generate a random seed for each run without replacement:
+    random_seeds = random.sample(range(2**32), args.num_runs)
 
     # If the data file already exists, use it instead of re-generating the data:
     if os.path.exists('returns_13_2.npy'):
